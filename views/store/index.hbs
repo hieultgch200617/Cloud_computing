@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Toy Store</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="author" content="TemplatesJungle">
+	<meta name="keywords" content="html,css,template,bootstrap">
+	<meta name="description" content="Bootstrap 5 HTML Cake Shop Template">
+	<link rel="stylesheet" type="text/css" href="fonts/icomoon/icomoon.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+		rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+
+	<header id="header">
+		<div class="container-fluid">
+			<div class="row">
+
+				<nav class="navbar navbar-expand-lg col-md-12">
+
+					<div class="navbar-brand">
+						<a href="home.php">
+							<img src="img/logo.png" alt="logo">
+						</a>
+					</div>
+
+					<button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+						data-target="#slide-navbar-collapse" aria-controls="slide-navbar-collapse"
+						aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"><i class="icon icon-navicon"></i></span>
+					</button>
+
+					<div class="navbar-collapse collapse" id="slide-navbar-collapse">
+						<ul class="navbar-nav list-inline text-uppercase">
+							<li class="nav-item text-hover active"><a href="home.php" class="nav-link"
+									data-effect="Home">Home</a></li>
+							<li class="nav-item text-hover"><a href="product.php" class="nav-link"
+									data-effect="Product">Product</a></li>
+							<li class="nav-item text-hover"><a href="blog.html" class="nav-link"
+									data-effect="Blogs">Blog</a></li>
+							<li class="nav-item text-hover"><a href="contact.html" class="nav-link"
+									data-effect="Contact">Contact us</a></li>
+							<li class="nav-item text-hover"><a href="website/register.php" class="nav-link"
+								data-effect="Register">Register</a></li>
+							<li class="nav-item text-hover"><a href="admin/login.php" class="nav-link"
+								data-effect="Register">Login for admin</a></li>
+						</ul>
+					</div>
+
+				</nav>
+
+			</div>
+		</div>
+
+	</header>
+
+</div>
+<section id="billboard">
+	<div class="main-slider">
+
+		<div class="slider-item">
+
+			<figure>
+				<img src="img/banner.png">
+			</figure>
+
+			<div class="text-overlay">
+				<div class="container">
+					<div class="col-md-8">
+						<div class="text-content">
+							<span class="fs-6 text-muted">FRESHLY BAKED</span>
+							<h2 class="colored padding-xsmall display-1 text-capitalize lh-1 py-2">Buttercream cakes</h2>
+							<p>A gorgeous selection of our favorites for a client to send as a new year’s gift. A gorgeous
+								selection of our favorites for a client to send as a new year’s gift.</p>
+							<div class="pix_btn">
+								<a href="#" class="btn-hvr-effects mt-3">Shop Now</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+		
+		
+	</div>
+
+</section>
+
+<br></br>
+
+<section class="about-us margin-medium">
+	<div class="container">
+		<div class="row">
+			<div class="nav-tabs-wrap products-tab">
+
+				<h2 class="section-title text-center"></h2>
+
+				<nav>
+					<div class="nav nav-tabs padding-small text-hover" id="nav-tab" role="tablist">
+						<a class="nav-link active" id="nav-missions-tab" data-bs-toggle="tab"
+							data-bs-target="#nav-missions" role="tab" aria-controls="nav-missions"
+							aria-selected="true">Missions</a>
+					</div>
+				</nav>
+
+				<div class="tab-content" id="nav-tabContent">
+					<div class="tab-pane fade show active" role="tabpanel" id="nav-missions"
+						aria-labelledby="nav-missions-tab">
+						<div class="col-md-12">
+							<div class="row">
+
+								<div class="col-md-6">
+									<div class="product-image"> 
+									<img src="img/tab.png" class="img-fluid" alt="...">
+									</div>
+								</div>
+
+								<div class="text-content col-md-6 bg-Peach p-5">
+									<h3 class="mb-4">
+										Providing quality products for all be happy and peace
+									</h3>
+									<p>Inspired by the plump fruit clusters in the nursery, Art's artisans have created two fresh new cakes to join the Artemis cake family,
+										 bringing the total to 14 flavors waiting for you to discover. From appearance to taste, let you peacefully immerse yourself in your own summer!
+										 Each slice of fresh fruit blooms with soft cream, blending into each beautiful cake on Art's shelf waiting for you to enjoy!</p>
+									<div class="pix_btn mt-4">
+										<a href="#" class="btn-hvr-effects">read more</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</section>
+
+<br></br>
+
+<section class="best-products margin-large">
+	<div class="container">
+		<h2 class="section-title text-center mb-4">Best Product</h2>
+		<div class="row">
+			<div class="d-flex products-slider">
+				<?php
+				$all_Product = find_all_product();
+				for ($i = 0; $i < 5; $i++):
+				$Product = mysqli_fetch_assoc($all_Product);
+				?>
+
+				<div class="product-item me-3">
+				<a href="<?php echo 'website/details.php?id='.$Product['ProductID']; ?>" class="product-image"><img src="img/<?php echo $Product['Image']; ?>" class="img-fluid"></a>
+					<div class="text-comtent text-center text-hover">
+						<h5 class="pt-4"><?php echo $Product['ProductName']; ?></h5>
+						<span class="price colored"><?php echo $Product['listPrice'], 'đ'; ?></span>
+					</div>
+				</div>
+
+				<?php 
+				endfor; 
+				mysqli_free_result($all_Product);
+			?>
+
+			</div>
+		</div>
+        
+	</div>
+</section>
+
+<br></br>
+<br></br>
+
+
+
+<footer id="footer">
+	<div class="container">
+		<div class="row justify-content-between g-5">
+
+			<div class="col-md-3 footer-logo text-center mb-3">
+				<img src="img/logo.png" class="mb-3">
+			</div>
+
+			<div class="col-md-5 mb-3">
+				<div class="widget-newsletter mb-5">
+					<h4 class="widget-title">Subscribe</h4>
+					<div class="newsletter-button d-flex">
+						<input type="text" name="Subscribe" placeholder="Your Email Address">
+						<button class="btn-hvr-effects">Subscribe</button>
+					</div>
+
+				</div>
+
+				<div class="working-schedule">
+					<h4 class="widget-title">Our Work Time</h4>
+					<div class="time-list d-flex">
+						<ul class="list-unstyled">
+							<li>Monday - Friday</li>
+							<li>8:00am - 8:30 pm</li>
+						</ul>
+						<ul class="list-unstyled">
+							<li>Saturday - Sunday</li>
+							<li>10:00am - 16:00 pm</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="js/plugins.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+</body>

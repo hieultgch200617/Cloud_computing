@@ -1,8 +1,37 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+body{
+  margin: 0;
+  border: 0;
 }
 
-a {
-  color: #00B7FF;
+.main_content{
+  display: flex;
 }
+
+
+.side_bar{
+  flex: 1;
+  height: fill;
+  background-color: wheat;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.content{
+  flex: 4;
+  height: auto;
+  background-color: white;
+  font-size: 20px;
+
+}
+
+ul li{
+  padding: 10px;
+  border-bottom: 1px solid black;
+  list-style-type: none;
+}
+
+ul li:hover{
+  color: white;
+  background-color: lightblue;
+}
+
